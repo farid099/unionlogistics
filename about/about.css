@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar .navbar-brand img {
+    height: 100px;
+  }
+  .navbar-nav {
+    background: #24acf0;
+  }
+
+  .navbar-nav .nav-item {
+    min-width: 150px;
+  }
+  .navbar-nav .nav-item:last-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-item:first-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-link {
+    /* background: #24acf0; */
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Hover effect to increase width */
+  .navbar-nav .nav-link:hover {
+    background: #34495e;
+    color: #ecf3f7;
+    padding-inline: 55px;
+  }
+  .navbar-nav .nav-item.dropdown:hover > .nav-link {
+    background: #34495e; /* Keep background color same as on hover */
+    padding-inline: 55px; /* Keep padding consistent */
+  }
+  /* Optional: Hover effect for dropdown */
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #34495e;
+    width: 100%; /* Make submenu take the same width as nav-link */
+  }
+  .container-fluid{
+    .navbar-brand{
+        img{
+            height: 80px;
+        }
+    }
+  }
+  .navbar-nav .dropdown-menu a {
+    color: #ecf3f7;
+  }
+
+  .navbar-nav .dropdown-menu li:hover a {
+    background-color: unset;
+  }
+
+  .navbar-nav .dropdown-menu li:hover .nav-link {
+    padding-inline: 55px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar .navbar-brand img {
+      height: 60px;
+    }
+  }
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.main_about {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Section layout */
+.section_top, .section_bottom, .section_top2, .section_bottom2 {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 30px; */
+    flex-wrap: wrap;
+}
+
+.section1, .section4, .section5, .section8 {
+    flex: 1;
+    /* padding: 10px; */
+    box-sizing: border-box;
+}
+.section4{
+    h1{
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 35px;
+    }
+    p{
+        padding-left: 20px;
+    }
+}
+.section5{
+    h1{
+        font-size: 30px;
+        padding-top: 10px;
+       
+    }
+    li{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+}
+.section8{
+    h1{
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 30px;
+    }
+    li{
+        padding-top: 10px;
+        font-size: 20px;
+    }
+}
+
+.section2, .section3, .section6, .section7 {
+    flex: 1;
+    /* padding: 10px; */
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Section headers */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Paragraph text */
+p, ul {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .section_top, .section_bottom, .section_top2, .section_bottom2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1, .section4, .section5, .section8, .section2, .section3, .section6, .section7 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p, ul {
+        font-size: 12px;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
+
+footer {
+    background-color: #102f4e;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px 20px; /* Add horizontal padding for small screens */
+    
+}
+
+.left_side, .middle_side, .right_side, .right_side2 {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+}
+
+.right_side3 {
+    margin-top: 20px; /* Add margin to separate from the content */
+    a {
+        font-size: 30px;
+        padding-inline: 8px;
+        color: #0591dd;
+    }
+}
+
+.right_side2 {
+    .modal-body {
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(6, 125, 216, 0.1);
+            width: 100%;
+            max-width: 600px;
+            h1 {
+                color: #0591dd;
+                width: max-content;
+                font-size: 32px;
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #0e96ff;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #1176c4;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #002c46;
+        }
+    }
+}
+
+.left_side, .middle_side, .right_side, .right_side2 {
+    i {
+        color: #0591dd;
+    }
+    h3 {
+        color: #f1f1f1;
+        font-size: 18px;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        padding-block: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: #bfbfbf;
+        font-size: 16px;
+    }
+    a:hover {
+        color: #fff;
+    }
+}
+.right_side3{
+    a{
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align content */
+    }
+
+    .left_side, .middle_side, .right_side, .right_side2 {
+        padding: 20px 0; /* Adjust padding for stacked layout */
+        text-align: center; /* Center align text */
+    }
+
+    .right_side3 {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center; /* Center icons */
+    }
+
+    .right_side3 a {
+        margin: 0 10px; /* Space out social icons */
+    }
+}

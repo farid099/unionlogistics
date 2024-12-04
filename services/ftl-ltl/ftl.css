@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar .navbar-brand img {
+    height: 100px;
+  }
+  .navbar-nav {
+    background: #24acf0;
+  }
+
+  .navbar-nav .nav-item {
+    min-width: 150px;
+  }
+  .navbar-nav .nav-item:last-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-item:first-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-link {
+    /* background: #24acf0; */
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Hover effect to increase width */
+  .navbar-nav .nav-link:hover {
+    background: #34495e;
+    color: #ecf3f7;
+    padding-inline: 55px;
+  }
+  .navbar-nav .nav-item.dropdown:hover > .nav-link {
+    background: #34495e; /* Keep background color same as on hover */
+    padding-inline: 55px; /* Keep padding consistent */
+  }
+  /* Optional: Hover effect for dropdown */
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #34495e;
+    width: 100%; /* Make submenu take the same width as nav-link */
+  }
+  .container-fluid{
+    .navbar-brand{
+        img{
+            height: 80px;
+        }
+    }
+  }
+  .navbar-nav .dropdown-menu a {
+    color: #ecf3f7;
+  }
+
+  .navbar-nav .dropdown-menu li:hover a {
+    background-color: unset;
+  }
+
+  .navbar-nav .dropdown-menu li:hover .nav-link {
+    padding-inline: 55px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar .navbar-brand img {
+      height: 60px;
+    }
+  }
+.main_top {
+    width: 100%;
+    background-color: #333;
+    position: relative; /* Allows for absolute positioning of the h3 */
+}
+
+.main_top img {
+   height: auto; /* Use 100% to maintain aspect ratio */
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+.main_top h3 {
+    font-size: 50px;
+    float: right;
+    color: #fff;
+    margin-top: 150px;
+    border: 3px solid rgb(0, 123, 255);
+    padding: 10px 100px;
+    border-right: 0;
+    border-top-left-radius: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-size: x-large;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main_top h3 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        margin-top: 100px; /* Adjust margin */
+        padding: 10px 50px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .main_top h3 {
+        font-size: 24px; /* Further adjust font size */
+        margin-top: 60px; /* Further adjust margin */
+        padding: 10px 20px; /* Further adjust padding */
+        float: none; /* Stack instead of floating */
+        text-align: center; /* Center text for smaller devices */
+    }
+}
+
+.main_about {
+    display: flex;
+    padding-top: 50px;
+    padding-inline: 50px;
+    opacity: 0;
+    animation: slideBottom 1.8s ease forwards;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+
+    .left_side {
+        /* padding-right: 100px; */
+        flex: 1; /* Allow it to grow and take available space */
+        margin-right: 60px;
+        
+
+        h3 {
+            font-size: 30px;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        p { padding-top: 5px;
+            padding-bottom: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: italic;
+            letter-spacing: 1px;
+            color: #4d4d4d; /* Optional: Define a color for better readability */
+        }
+    }
+
+    .right_side {
+        flex: 1; /* Allow it to grow and take available space */
+        margin-right: 100px;
+        img {
+            height: 300px;
+            width: 100%; /* Make images responsive */
+            object-fit: cover;
+            margin-bottom: 50px;
+            border: 5px solid rgb(201, 201, 201);
+            border-radius: 10px;
+        }
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main_about {
+        flex-direction: column; /* Stack left and right sides */
+        align-items: center; /* Center items */
+        padding-inline: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .left_side {
+        padding-right: 0; /* Remove right padding */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width */
+        
+        h3 {
+            font-size: 24px; /* Adjust font size */
+            padding-right: 10px;
+        }
+
+        p {
+            width: 100%; /* Adjust paragraph width */
+            padding-right: 20px;
+        }
+    }
+
+    .right_side {
+        width: 100%; /* Full width */
+        text-align: center; /* Center images */
+    }
+}
+
+@media (max-width: 480px) {
+    .left_side h3 {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .left_side p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+}
+@keyframes slideBottom {
+    100%{
+       transform:translatey(-10px);
+       opacity: 1;
+    }
+    0%{
+       transform:translatey(100px);
+       opacity: 0;
+    }
+  }
+  footer {
+    background-color: #102f4e;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 50px 20px; /* Add horizontal padding for small screens */
+
+    .left_side, .middle_side, .right_side, .right_side2 {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+        flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+    }
+    
+    .right_side3 {
+        margin-top: 20px; /* Add margin to separate from the content */
+        a {
+            font-size: 30px;
+            padding-inline: 8px;
+            color: #1176c4;
+        }
+        a:hover{
+            color: #0591dd;
+        }
+    }
+    
+    .right_side2 {
+        .modal-body {
+            .container {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(6, 125, 216, 0.1);
+                width: 100%;
+                max-width: 600px;
+                h1 {
+                    color: #0591dd;
+                    width: max-content;
+                    font-size: 32px;
+                }
+            }
+    
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+                color: #333;
+            }
+    
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            label {
+                margin: 10px 0 5px;
+                color: #555;
+            }
+    
+            input, textarea {
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #0e96ff;
+                border-radius: 4px;
+            }
+    
+            button {
+                padding: 10px;
+                background-color: #1176c4;
+                border: none;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            button:hover {
+                background-color: #002c46;
+            }
+        }
+    }
+    
+    .left_side, .middle_side, .right_side, .right_side2 {
+        i {
+            color: #0591dd;
+        }
+        h3 {
+            color: #f1f1f1;
+            font-size: 18px;
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            padding-block: 3px;
+        }
+        a {
+            text-decoration: none;
+            color: #bfbfbf;
+            font-size: 16px;
+        }
+        a:hover {
+            color: #fff;
+        }
+    }
+    .right_side3{
+        a{
+            i{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align content */
+    }
+
+    .left_side, .middle_side, .right_side, .right_side2 {
+        padding: 20px 0; /* Adjust padding for stacked layout */
+        text-align: center; /* Center align text */
+    }
+
+    .right_side3 {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center; /* Center icons */
+    }
+
+    .right_side3 a {
+        margin: 0 10px; /* Space out social icons */
+    }
+}

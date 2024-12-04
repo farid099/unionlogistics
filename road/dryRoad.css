@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.navbar .navbar-brand img {
+    height: 100px;
+  }
+  .navbar-nav {
+    background: #24acf0;
+  }
+
+  .navbar-nav .nav-item {
+    min-width: 150px;
+  }
+  .navbar-nav .nav-item:last-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-item:first-child {
+    margin: 0;
+  }
+  .navbar-nav .nav-link {
+    /* background: #24acf0; */
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  /* Hover effect to increase width */
+  .navbar-nav .nav-link:hover {
+    background: #34495e;
+    color: #ecf3f7;
+    padding-inline: 55px;
+  }
+  .navbar-nav .nav-item.dropdown:hover > .nav-link {
+    background: #34495e; /* Keep background color same as on hover */
+    padding-inline: 55px; /* Keep padding consistent */
+  }
+  /* Optional: Hover effect for dropdown */
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #34495e;
+    width: 100%; /* Make submenu take the same width as nav-link */
+  }
+  .container-fluid{
+    .navbar-brand{
+        img{
+            height: 80px;
+        }
+    }
+  }
+  .navbar-nav .dropdown-menu a {
+    color: #ecf3f7;
+  }
+
+  .navbar-nav .dropdown-menu li:hover a {
+    background-color: unset;
+  }
+
+  .navbar-nav .dropdown-menu li:hover .nav-link {
+    padding-inline: 55px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar .navbar-brand img {
+      height: 60px;
+    }
+  }
+.main_top {
+    height: auto;
+    /* width: 100%; */
+    background-color: #333;
+    position: relative; /* h3-nü doğru yerləşdirmək üçün */
+}
+
+.main_top img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Şəkilin kəsilməsini əngəlləyir */
+}
+
+.main_top h3 {
+    font-size: 50px;
+    float: right;
+    color: #fff;
+    margin-top: 150px;
+    border: 3px solid rgb(0, 123, 255);
+    padding: 10px 100px;
+    border-right: 0;
+    border-top-left-radius: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-size: x-large;
+    position: absolute; /* h3-nü şəkilin üstündə göstərmək üçün */
+    right: 0;
+    bottom: 20px; /* h3-nü şəkilin altından 20px məsafə qoyur */
+}
+
+/* Responsive dizayn üçün media sorğuları */
+@media (max-width: 768px) {
+    .main_top h3 {
+        font-size: 30px; /* Daha kiçik ekranlarda başlıq ölçüsünü kiçildin */
+        padding: 5px 50px; /* Padding-i azaldın */
+        margin-top: 100px; /* Yuxarı margin-i azaldın */
+    }
+}
+
+@media (max-width: 480px) {
+    .main_top h3 {
+        font-size: 24px; /* Həmçinin daha da kiçik ekranlarda */
+        padding: 5px 20px; /* Daha kiçik padding */
+        margin-top: 50px; /* Yuxarı margin-i daha da azaldın */
+    }
+}
+.main_about {
+    display: flex;
+    padding-top: 50px;
+    padding-inline: 100px;
+    opacity: 0;
+    animation: slideBottom 1.8s ease forwards;
+}
+
+.left_side {
+    padding-right: 100px;
+}
+
+.left_side h3 {
+    font-size: 35px;
+    padding-top: 30px;
+    color: rgb(17, 98, 159);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.left_side p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    color: #333;
+    
+}
+
+.right_side {
+    display: flex;
+    flex-direction: column; /* Şəkilləri sütun şəklində düzür */
+}
+
+.right_side img {
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border: 5px solid rgb(201, 201, 201);
+    border-radius: 10px;
+}
+
+/* Responsive dizayn üçün media sorğuları */
+@media (max-width: 768px) {
+    .main_about {
+        flex-direction: column; /* Flex yönünü sütuna dəyiş */
+        padding-inline: 20px; /* Padding-i azaldın */
+    }
+
+    .left_side {
+        padding-right: 0; /* Sağ tərəfdən padding-i sil */
+        margin-bottom: 20px; /* Alt tərəfdən boşluq əlavə et */
+    }
+
+    .left_side h3 {
+        font-size: 28px; /* Başlıq ölçüsünü kiçilt */
+    }
+
+    .right_side img {
+        width: 100%; /* Şəkillərin genişliyini tam edin */
+        height: auto; /* Hündürlüyü avtomatik edin */
+    }
+}
+
+@media (max-width: 480px) {
+    .left_side h3 {
+        font-size: 24px; /* Daha kiçik ekranlarda başlıq ölçüsünü daha da kiçilt */
+    }
+
+    .left_side p {
+        font-size: 14px; /* Paragrafların ölçüsünü kiçilt */
+    }
+}
+@keyframes slideBottom {
+    100%{
+       transform:translatey(-10px);
+       opacity: 1;
+    }
+    0%{
+       transform:translatey(100px);
+       opacity: 0;
+    }
+}
+footer {
+  background-color: #102f4e;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  padding: 50px 20px; /* Add horizontal padding for small screens */
+}
+
+.left_side, .middle_side, .right_side, .right_side2 {
+  padding: 0 20px; /* Reduce padding for smaller screens */
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+}
+
+.right_side3 {
+  margin-top: 20px; /* Add margin to separate from the content */
+  a {
+      font-size: 30px;
+      padding-inline: 8px;
+      
+  }
+}
+
+.right_side2 {
+  .modal-body {
+      .container {
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(6, 125, 216, 0.1);
+          width: 100%;
+          max-width: 600px;
+          h1 {
+              color: #0591dd;
+              width: max-content;
+              font-size: 32px;
+          }
+      }
+
+      h1 {
+          margin-bottom: 20px;
+          text-align: center;
+          color: #333;
+      }
+
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+
+      label {
+          margin: 10px 0 5px;
+          color: #555;
+      }
+
+      input, textarea {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #0e96ff;
+          border-radius: 4px;
+      }
+
+      button {
+          padding: 10px;
+          background-color: #1176c4;
+          border: none;
+          color: white;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+
+      button:hover {
+          background-color: #002c46;
+      }
+  }
+}
+
+.left_side, .middle_side, .right_side, .right_side2 {
+  i {
+      color: #0591dd;
+  }
+  h3 {
+      color: #f1f1f1;
+      font-size: 18px;
+  }
+  ul {
+      padding: 0;
+  }
+  li {
+      padding-block: 3px;
+  }
+  a {
+      text-decoration: none;
+      color: #bfbfbf;
+      font-size: 16px;
+  }
+  a:hover {
+      color: #fff;
+  }
+}
+.right_side3{
+  a{
+      i{
+          font-size: 30px;
+      }
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center align content */
+  }
+
+  .left_side, .middle_side, .right_side, .right_side2 {
+      padding: 20px 0; /* Adjust padding for stacked layout */
+      text-align: center; /* Center align text */
+  }
+
+  .right_side3 {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* Center icons */
+  }
+
+  .right_side3 a {
+      margin: 0 10px; /* Space out social icons */
+  }
+}
+
